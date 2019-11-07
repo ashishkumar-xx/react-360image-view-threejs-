@@ -1,4 +1,4 @@
-# react-360image-view-threejs
+# react360threejs
 
 CreatedBy: AshishKummar@gmail[DOT]com
 
