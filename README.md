@@ -22,7 +22,7 @@ Image - Path of 360 image.
 AutoRotate - 'true' of 'false' to make autorotate switch off or on.
 width, height - Set the width and height os view area. 
 
-NPM - https://www.npmjs.com/package/react360threejs
+NPM - https://www.npmjs.com/package/react360threejs | Install: npm i react360threejs
 
 
 LIVE DEMO - https://react-360image-view-threejs.stackblitz.io
