@@ -6,11 +6,11 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
  
 const style = {
-  height: 650 // we can control scene size by setting container dimensions
+  height: 650 
 };
 
 class View360Three extends Component {
-  componentDidMount() {
+  componentDidMount() {     
     this.sceneSetup();
     this.addCustomSceneObjects();
     this.startAnimationLoop();
@@ -49,9 +49,7 @@ class View360Three extends Component {
   // Here should come custom code.
 
   addCustomSceneObjects = () => {
-    const texture = new THREE.TextureLoader().load(
-      "https://threejs.org/examples/textures/2294472375_24a3b8ef46_o.jpg"
-    );
+    const texture = new THREE.TextureLoader().load(this.props.image);
 
     const material = new THREE.MeshBasicMaterial({ map: texture });
 
@@ -68,7 +66,9 @@ class View360Three extends Component {
 
   startAnimationLoop = () => {
     //this.cube.rotation.x += 0.01;
-    this.cube.rotation.y += 0.0009;
+    if(this.props.autoRotate=='true'){ 
+        this.cube.rotation.y += 0.0009;
+    }
 
     this.renderer.render(this.scene, this.camera);
 
@@ -91,7 +91,8 @@ class View360Three extends Component {
   };
 
   render() {
-    return <div style={style} ref={ref => (this.el = ref)} />;
+ 
+    return <div style={{width:Number(this.props.width),height:Number(this.props.height)}} ref={ref => (this.el = ref)} />;
   }
 }
 
@@ -116,10 +117,7 @@ class Container extends React.Component {
   }
 }
 
-//const rootElement = document.getElementById("root");
-
-//ReactDOM.render(<Container />, rootElement);
-
+ 
 export default View360Three;
 
 
