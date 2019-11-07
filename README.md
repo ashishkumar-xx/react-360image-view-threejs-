@@ -2,6 +2,8 @@
 
 CreatedBy: AshishKummar@gmail[DOT]com
 
+About -  This is image 360 view react compoment build by using react and three js librarty.  
+
 How to Use - 
 
 Just import the View360Three.js
